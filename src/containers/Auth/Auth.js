@@ -44,7 +44,6 @@ class Auth extends React.Component {
     };
 
     loginHenadler = () => {
-
         this.props.auth(
             this.state.formControlls.email.value,
             this.state.formControlls.password.value,

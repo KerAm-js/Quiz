@@ -23,7 +23,7 @@ export default function auth(email, password, isLogin) {
 
             localStorage.setItem('token', data.idToken);
             localStorage.setItem('localId', data.localId);
-            localStorage.setItem('expirationDate', new Date(new Date().getTime + data.expiresIn * 1000));
+            localStorage.setItem('expirationDate', new Date(new Date().getTime() + data.expiresIn * 1000));
 
             dispatch(authSuccess(data.idToken));
             dispatch(autoLogout(data.expiresIn * 1000));
